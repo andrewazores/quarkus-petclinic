@@ -3,6 +3,9 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: petclinic-schema
+  labels:
+    app.kubernetes.io/name: quarkus-petclinic
+    app.kubernetes.io/version: 1.0.0
 spec:
   ttlSecondsAfterFinished: 100
   template:
